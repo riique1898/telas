@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f8f5" />
+    <title>Organiza Estudante — sua rotina, no eixo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Menu principal">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div><strong>organiza</strong><small>estudante</small></div>
+        </div>
+
+        <div class="sidebar-section-label">menu</div>
+        <nav class="main-nav">
+          <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span>Visão geral</button>
+          <button class="nav-item" data-view="services"><span class="nav-icon">✦</span>Recursos</button>
+          <button class="nav-item" data-view="profile"><span class="nav-icon">◎</span>Meu perfil</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <div class="tiny-spark">✦</div>
+          <strong>Pequenos passos,<br />grandes conquistas.</strong>
+          <p>Você já avançou 68% esta semana.</p>
+          <div class="progress-line"><span></span></div>
+        </div>
+        <button class="nav-item logout" data-view="welcome"><span class="nav-icon">↪</span>Sair</button>
+      </aside>
+
+      <main class="main-content">
+        <section class="view" id="welcome">
+          <div class="welcome-layout">
+            <div class="welcome-copy">
+              <div class="brand brand-large"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>organiza</strong><small>estudante</small></div></div>
+              <p class="eyebrow">seu ritmo. seu futuro.</p>
+              <h1>Estudar pode<br /><em>ser mais leve.</em></h1>
+              <p class="lead">Uma central simples para organizar sua rotina, acompanhar suas metas e encontrar espaço para o que realmente importa.</p>
+              <button class="primary-button large-button" data-view="login">Começar agora <span>→</span></button>
+              <p class="welcome-note">Feito para quem quer aprender sem se perder no caminho.</p>
+            </div>
+            <div class="welcome-visual">
+              <div class="shape shape-one"></div><div class="shape shape-two"></div>
+              <div class="visual-note note-top">foco do dia <strong>3h 20min</strong></div>
+              <div class="phone-mockup">
+                <div class="phone-top"><span>9:41</span><span>•••</span></div>
+                <span class="phone-greeting">olá, Bia!</span>
+                <strong>Qual é o plano<br />para hoje?</strong>
+                <div class="phone-progress"><span></span></div>
+                <small>68% da rotina concluída</small>
+                <div class="phone-task"><span class="check">✓</span><span>Revisar matemática</span><b>09:00</b></div>
+                <div class="phone-task"><span class="check muted">✓</span><span>Projeto de história</span><b>14:30</b></div>
+                <div class="phone-task"><span class="check muted">✓</span><span>Leitura livre</span><b>19:00</b></div>
+              </div>
+              <div class="visual-note note-bottom"><span class="mini-avatar">B</span><span>você está<br /><strong>no caminho certo</strong></span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view auth-view" id="login" hidden>
+          <div class="auth-card">
+            <button class="back-button" data-view="welcome">← voltar</button>
+            <div class="brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>organiza</strong><small>estudante</small></div></div>
+            <p class="eyebrow">bom ter você aqui</p>
+            <h1>Vamos começar?</h1>
+            <p class="auth-subtitle">Entre para acessar sua rotina e continuar de onde parou.</p>
+            <form id="login-form">
+              <label>E-mail <input type="email" placeholder="voce@email.com" required /></label>
+              <label>Senha <span class="label-action">Esqueceu a senha?</span><input type="password" placeholder="••••••••" required /></label>
+              <button class="primary-button" type="submit">Entrar <span>→</span></button>
+            </form>
+            <p class="form-footer">Ainda não tem uma conta? <button type="button" data-view="home">Criar conta</button></p>
+          </div>
+          <div class="auth-aside"><span class="quote-mark">“</span><blockquote>Organização não é sobre fazer tudo. É sobre fazer o que importa, com intenção.</blockquote><div class="quote-author"><span class="avatar terracotta">M</span><span><strong>Marina, 17</strong><small>usuária desde 2024</small></span></div></div>
+        </section>
+
+        <section class="view dashboard-view" id="home" hidden>
+          <header class="topbar"><div><p class="date-label">QUARTA-FEIRA, 05 DE NOVEMBRO DE 2026</p><h1>Bom dia, Beatriz <span class="wave">✦</span></h1></div><div class="topbar-actions"><button class="icon-button" aria-label="Notificações">♧<span class="notification-dot"></span></button><button class="profile-chip" data-view="profile"><span class="avatar">B</span><span><strong>Beatriz Lima</strong><small>3º ano · estudante</small></span><b>⌄</b></button></div></header>
+          <div class="dashboard-grid">
+            <div class="hero-card"><div><span class="card-kicker">seu resumo de hoje</span><h2>Um passo de cada vez.<br /><em>Você consegue.</em></h2><p>Você tem 3 tarefas planejadas<br />para hoje.</p><button class="text-button" data-view="services">Ver minha agenda <span>→</span></button></div><div class="sun-illustration"><span class="sun-core"></span><i>✦</i><i>✧</i><i>·</i></div></div>
+            <div class="focus-card"><div class="card-heading"><span class="card-kicker">foco da semana</span><span class="trend">↗ 12%</span></div><div class="focus-number">12<span>h</span> <small>32min</small></div><p>de estudo focado</p><div class="bar-chart"><i style="height:42%"></i><i style="height:65%"></i><i style="height:51%"></i><i style="height:83%"></i><i style="height:60%"></i><i class="today" style="height:92%"></i><i style="height:38%"></i></div><div class="chart-days"><span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span><span>sáb</span><span>dom</span></div></div>
+            <div class="tasks-card"><div class="card-heading"><span class="card-kicker">próximas tarefas</span><button class="plus-button" aria-label="Adicionar tarefa">+</button></div><div class="task-item"><span class="task-dot coral"></span><span><strong>Revisar matemática</strong><small>Álgebra · 45 min</small></span><b>09:00</b></div><div class="task-item"><span class="task-dot blue"></span><span><strong>Projeto de história</strong><small>Pesquisa · 1h 20min</small></span><b>14:30</b></div><div class="task-item"><span class="task-dot green"></span><span><strong>Leitura livre</strong><small>O poder do hábito · 30 min</small></span><b>19:00</b></div><button class="outline-button" data-view="services">Ver agenda completa</button></div>
+            <div class="quote-card"><span class="quote-mark">“</span><p>O futuro depende do que você faz hoje.</p><small>— Mahatma Gandhi</small><div class="quote-leaf">⌁</div></div>
+          </div>
+          <div class="section-header"><div><p class="eyebrow">continue de onde parou</p><h2>Seus espaços de estudo</h2></div><button class="text-button" data-view="services">ver todos <span>→</span></button></div>
+          <div class="study-spaces"><div class="space-card mathematics"><span class="space-icon">∑</span><div><strong>Matemática</strong><small>4 atividades pendentes</small></div><span class="space-arrow">→</span></div><div class="space-card history"><span class="space-icon">◌</span><div><strong>História</strong><small>2 atividades pendentes</small></div><span class="space-arrow">→</span></div><div class="space-card reading"><span class="space-icon">⌁</span><div><strong>Leitura livre</strong><small>12% do livro concluído</small></div><span class="space-arrow">→</span></div></div>
+        </section>
+
+        <section class="view dashboard-view" id="services" hidden>
+          <header class="topbar"><div><p class="date-label">ORGANIZE DO SEU JEITO</p><h1>Seus recursos <span class="wave">✦</span></h1></div><div class="topbar-actions"><button class="icon-button">♧<span class="notification-dot"></span></button><button class="profile-chip" data-view="profile"><span class="avatar">B</span><span><strong>Beatriz Lima</strong><small>3º ano · estudante</small></span><b>⌄</b></button></div></header>
+          <div class="services-intro"><div><p>Ferramentas que acompanham seu momento, da primeira tarefa ao grande objetivo.</p></div><button class="primary-button">+ Novo espaço</button></div>
+          <div class="resource-grid"><article class="resource-card accent-yellow"><span class="resource-icon">✓</span><h3>Minha agenda</h3><p>Planeje seus horários e nunca mais esqueça uma entrega.</p><button class="text-button">Abrir agenda →</button></article><article class="resource-card accent-blue"><span class="resource-icon">◷</span><h3>Modo foco</h3><p>Bloqueie distrações e transforme 25 minutos em progresso.</p><button class="text-button">Começar foco →</button></article><article class="resource-card accent-coral"><span class="resource-icon">↗</span><h3>Minhas metas</h3><p>Divida seus sonhos em passos possíveis de acompanhar.</p><button class="text-button">Ver metas →</button></article><article class="resource-card accent-green"><span class="resource-icon">✎</span><h3>Anotações</h3><p>Guarde ideias, resumos e tudo que você quer lembrar.</p><button class="text-button">Abrir notas →</button></article></div>
+          <div class="tip-banner"><span>✦</span><div><strong>Uma dica para hoje</strong><p>Comece pela tarefa mais importante. O resto fica mais leve depois.</p></div><button class="icon-button">→</button></div>
+        </section>
+
+        <section class="view dashboard-view" id="profile" hidden>
+          <header class="topbar"><div><p class="date-label">SEU ESPAÇO</p><h1>Meu perfil <span class="wave">◎</span></h1></div><div class="topbar-actions"><button class="icon-button">♧<span class="notification-dot"></span></button></div></header>
+          <div class="profile-layout"><div class="profile-main"><div class="profile-cover"><div class="profile-avatar">B</div><button class="edit-avatar">✎</button></div><div class="profile-info"><div><h2>Beatriz Lima</h2><p>beatriz.lima@email.com</p></div><button class="outline-button">Editar perfil</button></div><div class="profile-stats"><div><strong>12</strong><small>horas focadas</small></div><div><strong>08</strong><small>metas concluídas</small></div><div><strong>24</strong><small>dias de sequência</small></div></div></div><div class="settings-card"><p class="card-kicker">preferências</p><h3>Como podemos ajudar?</h3><label class="toggle-row"><span><strong>Lembretes diários</strong><small>Receba um toque para manter o ritmo.</small></span><input type="checkbox" checked /><i></i></label><label class="toggle-row"><span><strong>Resumo semanal</strong><small>Veja seu progresso toda segunda.</small></span><input type="checkbox" checked /><i></i></label><label class="toggle-row"><span><strong>Modo escuro</strong><small>Uma opção mais confortável à noite.</small></span><input type="checkbox" /><i></i></label></div></div>
+        </section>
+      </main>
+    </div>
+    <div class="toast" id="toast">Tudo certo! Vamos nessa ✦</div>
+    <script src="script.js"></script>
+  </body>
+</html>
