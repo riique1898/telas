@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <style>[hidden] { display: none !important; }</style>
   </head>
   <body>
     <div class="app-shell">
@@ -68,20 +69,21 @@
             <button class="back-button" data-view="welcome">← voltar</button>
             <div class="brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><strong>organiza</strong><small>estudante</small></div></div>
             <p class="eyebrow">bom ter você aqui</p>
-            <h1>Vamos começar?</h1>
-            <p class="auth-subtitle">Entre para acessar sua rotina e continuar de onde parou.</p>
+            <h1 id="auth-title">Vamos começar?</h1>
+            <p class="auth-subtitle" id="auth-subtitle">Entre para acessar sua rotina e continuar de onde parou.</p>
             <form id="login-form">
-              <label>E-mail <input type="email" placeholder="voce@email.com" required /></label>
-              <label>Senha <span class="label-action">Esqueceu a senha?</span><input type="password" placeholder="••••••••" required /></label>
-              <button class="primary-button" type="submit">Entrar <span>→</span></button>
+              <label id="name-field" hidden style="display: none">Nome completo <input type="text" autocomplete="name" placeholder="Seu nome" /></label>
+              <label>E-mail <input type="email" autocomplete="email" placeholder="voce@email.com" required /></label>
+              <label>Senha <span class="label-action">Esqueceu a senha?</span><input type="password" autocomplete="current-password" placeholder="••••••••" required /></label>
+              <button class="primary-button" id="auth-submit" type="submit">Entrar <span>→</span></button>
             </form>
-            <p class="form-footer">Ainda não tem uma conta? <button type="button" data-view="home">Criar conta</button></p>
+            <p class="form-footer"><span id="auth-prompt">Ainda não tem uma conta?</span> <button type="button" id="auth-toggle">Criar conta</button></p>
           </div>
           <div class="auth-aside"><span class="quote-mark">“</span><blockquote>Organização não é sobre fazer tudo. É sobre fazer o que importa, com intenção.</blockquote><div class="quote-author"><span class="avatar terracotta">M</span><span><strong>Marina, 17</strong><small>usuária desde 2024</small></span></div></div>
         </section>
 
         <section class="view dashboard-view" id="home" hidden>
-          <header class="topbar"><div><p class="date-label">QUARTA-FEIRA, 05 DE NOVEMBRO DE 2026</p><h1>Bom dia, Beatriz <span class="wave">✦</span></h1></div><div class="topbar-actions"><button class="icon-button" aria-label="Notificações">♧<span class="notification-dot"></span></button><button class="profile-chip" data-view="profile"><span class="avatar">B</span><span><strong>Beatriz Lima</strong><small>3º ano · estudante</small></span><b>⌄</b></button></div></header>
+          <header class="topbar"><div><p class="date-label">SEXTA-FEIRA, 06 DE NOVEMBRO DE 2026</p><h1>Bom dia, Beatriz <span class="wave">✦</span></h1></div><div class="topbar-actions"><button class="icon-button" aria-label="Notificações">♧<span class="notification-dot"></span></button><button class="profile-chip" data-view="profile"><span class="avatar">B</span><span><strong>Beatriz Lima</strong><small>3º ano · estudante</small></span><b>⌄</b></button></div></header>
           <div class="dashboard-grid">
             <div class="hero-card"><div><span class="card-kicker">seu resumo de hoje</span><h2>Um passo de cada vez.<br /><em>Você consegue.</em></h2><p>Você tem 3 tarefas planejadas<br />para hoje.</p><button class="text-button" data-view="services">Ver minha agenda <span>→</span></button></div><div class="sun-illustration"><span class="sun-core"></span><i>✦</i><i>✧</i><i>·</i></div></div>
             <div class="focus-card"><div class="card-heading"><span class="card-kicker">foco da semana</span><span class="trend">↗ 12%</span></div><div class="focus-number">12<span>h</span> <small>32min</small></div><p>de estudo focado</p><div class="bar-chart"><i style="height:42%"></i><i style="height:65%"></i><i style="height:51%"></i><i style="height:83%"></i><i style="height:60%"></i><i class="today" style="height:92%"></i><i style="height:38%"></i></div><div class="chart-days"><span>seg</span><span>ter</span><span>qua</span><span>qui</span><span>sex</span><span>sáb</span><span>dom</span></div></div>
